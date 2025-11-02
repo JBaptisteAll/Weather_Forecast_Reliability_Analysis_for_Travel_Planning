@@ -56,15 +56,19 @@ These insights can support:
 
 ---
 
-## Key Insights
-- Forecasts beyond 72h show **up to 10% drop in accuracy** in some cities.  
-- **Western coastal regions** show higher forecast variability due to maritime influences.  
-- Mountain areas remain **most sensitive to microclimatic changes**, reducing long-term forecast reliability.  
-- A clear **data gap** exists between user perception (“it always rains here”) and statistical reality.
+## 🔍 Key Insights
+**Forecast Reliability by Region**
+![Forecast Accuracy Map](Assets/5grp_Accuracy.png)
+
+- Forecasts beyond **72 hours** show up to **10% drop in accuracy** in some cities.  
+- **Mountain areas** remain most sensitive to microclimatic changes, reducing long-term forecast reliability.  
+- A clear **gap exists between perception and data**, regions often considered “rainy” can, in reality, display more consistent forecast accuracy.  
+
+> The map highlights five distinct reliability groups — **highest accuracy along the southern coast**, with **clear diagonal patterns emerging toward the north**, while **mountain regions show the lowest stability** in forecasts.
 
 ---
 
-## Tools & Technologies
+## Technologies Used
 **Python** (Pandas, Plotly, Scrapy) • **Streamlit** • **Power BI / DAX** • **GitHub Actions (CI/CD)** • **Scraping** • **OpenWeatherMap API** • **Nominatim API** • **Make.com**
 
 ---
@@ -84,4 +88,4 @@ By combining automation, analytics, and interactive design, it showcases my abil
 - Deliver **end-to-end solutions** (from data collection to insights)
 - Build tools that are **both analytical and user-focused**
 
-> 🎯 *Because good data doesn’t just describe the weather — it helps you decide where to go.*
+>*Because good data doesn’t just describe the weather — it helps you decide where to go.*
