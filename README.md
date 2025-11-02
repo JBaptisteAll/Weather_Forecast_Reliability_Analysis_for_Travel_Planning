@@ -56,7 +56,7 @@ These insights can support:
 
 ---
 
-## 🔍 Key Insights
+## Key Insights
 **Forecast Reliability by Region**
 ![Forecast Accuracy Map](Assets/5grp_Accuracy.png)
 
