@@ -57,27 +57,27 @@ These insights can support:
 ---
 
 ## Key Insights
-- ⚠️ Forecasts beyond 72h show **up to 30% drop in accuracy** for temperature and rain probability.  
-- 🌦️ **Western coastal regions** show higher forecast variability due to maritime influences.  
-- ⛰️ Mountain areas remain **most sensitive to microclimatic changes**, reducing long-term forecast reliability.  
-- 🧩 A clear **data gap** exists between user perception (“it always rains here”) and statistical reality.
+- Forecasts beyond 72h show **up to 10% drop in accuracy** in some cities.  
+- **Western coastal regions** show higher forecast variability due to maritime influences.  
+- Mountain areas remain **most sensitive to microclimatic changes**, reducing long-term forecast reliability.  
+- A clear **data gap** exists between user perception (“it always rains here”) and statistical reality.
 
 ---
 
-## 🧰 Tools & Technologies
-**Python** (Pandas, Plotly, Scrapy) • **Streamlit** • **Power BI / DAX** • **GitHub Actions (CI/CD)** • **OpenWeatherMap API** • **Nominatim API** • **Make.com**
+## Tools & Technologies
+**Python** (Pandas, Plotly, Scrapy) • **Streamlit** • **Power BI / DAX** • **GitHub Actions (CI/CD)** • **Scraping** • **OpenWeatherMap API** • **Nominatim API** • **Make.com**
 
 ---
 
-## 🚀 What’s Next
-- 🗺️ Add an **AI-driven recommendation model** for “where to go next weekend”.  
-- 🔎 Correlate weather data with **tourism KPIs** (hotel occupancy, train bookings).  
-- ☁️ Extend analysis to **European destinations** using the same data model.  
-- 🤖 Integrate **forecast reliability alerts** directly in the app.
+## What’s Next
+- Add an **AI-driven recommendation model** for “where to go next weekend”.  
+- Correlate weather data with **tourism KPIs** (hotel occupancy, train bookings).  
+- Extend analysis to **European destinations** using the same data model.  
+- Integrate **forecast reliability alerts** directly in the app.
 
 ---
 
-## ✨ Summary
+## Summary
 This project demonstrates how **data can bridge the gap between prediction and decision**.  
 By combining automation, analytics, and interactive design, it showcases my ability to:
 - Translate **data workflows into business value**
