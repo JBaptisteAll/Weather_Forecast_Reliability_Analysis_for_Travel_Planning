@@ -1,0 +1,60 @@
+name: Run Python Script Daily
+
+on:
+  schedule:
+    - cron: '30 21 * * *'  # Exécution à 21h30 UTC (22h30 Paris)
+  workflow_dispatch:  # Permet de lancer manuellement si besoin
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set environment variables 
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'  
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install --upgrade pip
+          pip install scrapy python-dotenv
+      
+      # Faire un git pull avant d'exécuter le script pour récupérer les fichiers existants
+      - name: Pull latest data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git pull origin main  # Récupère les fichiers existants
+
+      - name: Check if API_KEY is set
+        run: |
+          if [ -z "$API_KEY" ]; then
+            echo "❌ API_KEY is NOT available"
+            exit 1
+          else
+            echo "✅ API_KEY is available"
+          fi
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+      
+      - name: Run script
+        run: python Weekend_getaway_project.py # Script
+
+      - name: Commit et push des résultats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add final_results.csv forecasts/
+          git commit -m "Auto update of final_results.csv & forecasts/ with append" || echo "No changes to commit"
+          git push origin main
+
